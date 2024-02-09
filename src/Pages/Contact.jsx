@@ -62,13 +62,17 @@ export const Contact = () => {
     // Save data to the database::-
 
     try {
-      const response = await fetch("http://localhost:3000/api/form/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(contact), // hmara data object ke form me hia to hm usko convert karenge JSON me by Stringify. chuki sb data contact ke under hai isliye hm user ko v pass kiye.
-      });
+      // const response = await fetch("http://localhost:3000/api/form/contact", {
+      const response = await fetch(
+        "https://gauravmymern1.onrender.com/api/form/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(contact), // hmara data object ke form me hia to hm usko convert karenge JSON me by Stringify. chuki sb data contact ke under hai isliye hm user ko v pass kiye.
+        }
+      );
       console.log("respnc", response);
       console.log("response", response.ok);
 

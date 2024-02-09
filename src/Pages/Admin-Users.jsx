@@ -11,12 +11,16 @@ function AdminUsers() {
   const getAllUsersData = async () => {
     try {
       console.log("User TOken hai", authorizationToken);
-      const response = await fetch("http://localhost:3000/api/admin/users", {
-        method: "GET",
-        headers: {
-          Authorization: authorizationToken,
-        },
-      });
+      // const response = await fetch("http://localhost:3000/api/admin/users", {
+      const response = await fetch(
+        "https://gauravmymern1.onrender.com/api/admin/users",
+        {
+          method: "GET",
+          headers: {
+            Authorization: authorizationToken,
+          },
+        }
+      );
       // console.log("My res ==", response);
 
       const data = await response.json();
@@ -37,7 +41,7 @@ function AdminUsers() {
 
     console.log("wwwww");
     const response = await fetch(
-      `http://localhost:3000/api/admin/users/delete/${id}`,
+      `https://gauravmymern1.onrender.com/api/admin/users/delete/${id}`,
       {
         method: "DELETE",
         headers: {

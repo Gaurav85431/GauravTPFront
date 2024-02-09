@@ -42,13 +42,17 @@ export const Register = () => {
     // Insert data into database
     try {
       // fetch return promises
-      const response = await fetch("http://localhost:3000/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      });
+      // const response = await fetch("http://localhost:3000/api/auth/register", {
+      const response = await fetch(
+        "https://gauravmymern1.onrender.com/api/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        }
+      );
 
       const res_data = await response.json();
       console.log("Response from server -> ", res_data); //error-middelware.js file se

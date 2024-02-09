@@ -21,8 +21,11 @@ function AdminUpdate() {
     try {
       // id hme url se aa jayega jaise hi koi sa button pr click krega to usse related url i.e. having userID sb aa jayega.
 
+      // const response = await fetch(
+      //   `http://localhost:3000/api/admin/users/${params.id}`,
+      //   {
       const response = await fetch(
-        `http://localhost:3000/api/admin/users/${params.id}`,
+        `https://gauravmymern1.onrender.com/api/admin/users/${params.id}`,
         {
           method: "GET",
           headers: {
@@ -68,8 +71,11 @@ function AdminUpdate() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // const response = await fetch(
+      //   `http://localhost:3000/api/admin/users/update/${params.id}`,
+      //   {
       const response = await fetch(
-        `http://localhost:3000/api/admin/users/update/${params.id}`,
+        `https://gauravmymern1.onrender.com/api/admin/users/update/${params.id}`,
         {
           method: "PATCH",
           headers: {

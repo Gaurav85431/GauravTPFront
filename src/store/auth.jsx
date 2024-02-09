@@ -58,13 +58,17 @@ export const AuthProvider = ({ children }) => {
       setIsLoding(true);
       // token ko match kra kr dekene se pehle hi setIsLoading(true) kr denge. current user ke data fetch krne se pehle hi hm setIsLoading(true) ko  chala dnege.
 
-      const response = await fetch("http://localhost:3000/api/auth/user", {
-        method: "GET",
-        headers: {
-          // Authorization: `Bearer ${token}`,
-          Authorization: authorizationToken,
-        },
-      });
+      // const response = await fetch("http://localhost:3000/api/auth/user", {
+      const response = await fetch(
+        "https://gauravmymern1.onrender.com/api/auth/user",
+        {
+          method: "GET",
+          headers: {
+            // Authorization: `Bearer ${token}`,
+            Authorization: authorizationToken,
+          },
+        }
+      );
 
       // agar hme data mil rha hai.
 
@@ -97,9 +101,13 @@ export const AuthProvider = ({ children }) => {
   // --------------
   const getServices = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/data/service", {
-        method: "GET",
-      });
+      // const response = await fetch("http://localhost:3000/api/data/service", {
+      const response = await fetch(
+        "https://gauravmymern1.onrender.com/api/data/service",
+        {
+          method: "GET",
+        }
+      );
 
       if (response.ok) {
         const data = await response.json(); // data JSON me hai to hme usko conver krke object ke form me chahiye to hm usko change kar diye.

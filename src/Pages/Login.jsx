@@ -28,7 +28,8 @@ export const Login = () => {
     });
   }
 
-  const URL = "http://localhost:3000/api/auth/login";
+  // const URL = "http://localhost:3000/api/auth/login";
+  const URL = "https://gauravmymern1.onrender.com/api/auth/login";
 
   //form ke click per not reload
   const handleSubmit = async (e) => {
